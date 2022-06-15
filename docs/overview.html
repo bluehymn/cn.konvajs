@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+<title>
+   基础 | Konva 中文文档 中文API
+</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<link rel="canonical" href="http://konvajs-doc.bluehymn.com/docs/overview.html" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link
+  rel="apple-touch-icon"
+  sizes="114x114"
+  href="/apple-touch-icon-114x114.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="120x120"
+  href="/apple-touch-icon-120x120.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/apple-touch-icon-144x144.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png"
+/>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link
+  rel="icon"
+  type="image/png"
+  href="/android-chrome-192x192.png"
+  sizes="192x192"
+/>
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link rel="manifest" href="/android-chrome-manifest.json" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+<meta name="theme-color" content="#ffffff" /> 
+<link rel="stylesheet" href="/css/style.css">
+
+<link
+  href="//fonts.googleapis.com/css?family=Lato:300,700"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700"
+  rel="stylesheet"
+  type="text/css"
+/>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?01c61841a1e37d9447fca013e22f8f67";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<link rel="alternate" href="/atom.xml" title="Konva.js - JavaScript 2d canvas library"> <meta name="description" content="Konva 是什么?Konva 是一个HTML5 Canvas JavaScript 框架，它通过对 2d context 的扩展实现了在桌面端和移动端的可交互性。Konva 提供了高性能的动画，补间，节点嵌套，布局，滤镜，缓存，事件绑定（桌面&#x2F;移动端）等等功能。你可以使用 Konva 在舞台上绘制图形，给图形添加事件，移动、缩放和旋转图形并且支持高性能的动画即使包含数千个图形。 工作原理?Kon">
+<meta property="og:type" content="website">
+<meta property="og:title" content="基础">
+<meta property="og:url" content="http://konvajs-doc.bluehymn.com/docs/overview.html">
+<meta property="og:site_name" content="Konva.js - JavaScript 2d canvas library">
+<meta property="og:description" content="Konva 是什么?Konva 是一个HTML5 Canvas JavaScript 框架，它通过对 2d context 的扩展实现了在桌面端和移动端的可交互性。Konva 提供了高性能的动画，补间，节点嵌套，布局，滤镜，缓存，事件绑定（桌面&#x2F;移动端）等等功能。你可以使用 Konva 在舞台上绘制图形，给图形添加事件，移动、缩放和旋转图形并且支持高性能的动画即使包含数千个图形。 工作原理?Kon">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://konvajs-doc.bluehymn.com/logo.png">
+<meta property="article:published_time" content="2021-12-02T10:38:36.710Z">
+<meta property="article:modified_time" content="2021-12-02T10:38:36.710Z">
+<meta property="article:author" content="Anton Lavrenov">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://konvajs-doc.bluehymn.com/logo.png">
+<meta name="twitter:site" content="@lavrton"> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-155099157-1', 'konvajs-doc.bluehymn.com');
+  ga('send', 'pageview');
+</script>
+
+
+  </head>
+  <body>
+    <header id="header">
+  <div class="outer">
+    <div class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Konva</a>
+        <a id="main-nav-toggle"></a>
+      </h1>
+      <nav id="main-nav">
+        <ul id="main-nav-list">
+          
+          <li class="main-nav-item">
+            <a href="/docs/" class="main-nav-link">
+              教程
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/sandbox" class="main-nav-link">
+              示例
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/api/Konva.html" class="main-nav-link">
+              API
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/react" class="main-nav-link">
+              React
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/vue" class="main-nav-link">
+              Vue
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/donate.html" class="main-nav-link">
+              支持 Konva
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/support.html" class="main-nav-link">
+              帮助
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <input id="search" placeholder="Search the docs" />
+          </li>
+          <li class="main-nav-item">
+            <a
+              href="https://lavrton.com/consulting"
+              title="Consulting"
+              target="_blank"
+              class="main-nav-link"
+              style="color: white;background: #0bad42;padding: 10px;border-radius: 10px;"
+              >Consulting</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="https://github.com/konvajs/konva"
+          id="github-btn"
+          title="GitHub"
+          target="_blank"
+        ></a>
+        <!--
+          <a id="search-btn" class="st-search-launcher" title="Search"></a>
+        -->
+      </nav>
+    </div>
+  </div>
+</header>
+ <article class="page" itemscope itemtype="http://schema.org/Article">
+  <header id="page-banner">
+    <div class="outer">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title" itemprop="name">基础</h1>
+        <a
+          href="https://github.com/konvajs/site/blob/master/source/docs/overview.md"
+          title="Improve this doc"
+          id="page-edit-link"
+        ></a>
+      </div>
+    </div>
+  </header>
+  <!-- Begin Mailchimp Signup Form -->
+<style type="text/css">
+  /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
+Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
+
+  #mc_embed_signup form {
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+  .mc-field-group {
+    display: inline-block;
+  } /* positions input field horizontally */
+  #mc_embed_signup input.email {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, Verdana,
+      sans-serif;
+    font-size: 15px;
+    border: 1px solid #abb0b2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #343434;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 0.4em;
+    display: inline-block;
+    margin: 0;
+    width: 350px;
+    vertical-align: top;
+  }
+  #mc_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  #mc_embed_signup .clear {
+    display: inline-block;
+  } /* positions button horizontally in line with input */
+  #mc_embed_signup .button {
+    font-size: 13px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background-color: #aaa;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 18px;
+    display: inline-block;
+    margin: 0;
+    transition: all 0.23s ease-in-out 0s;
+  }
+  #mc_embed_signup .button:hover {
+    background-color: #777;
+    cursor: pointer;
+  }
+  #mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em 0.5em 0em 0.5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+  }
+  #mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em 0.5em 0.5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+  }
+  #mc_embed_signup #mce-error-response {
+    display: none;
+  }
+  #mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+  }
+  #mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: 0.5em 0;
+  }
+  @media (max-width: 768px) {
+    #mc_embed_signup input.email {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    #mc_embed_signup .clear {
+      display: block;
+      width: 100%;
+    }
+    #mc_embed_signup .button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+  }
+  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+  <form
+    action="https://lavrton.us10.list-manage.com/subscribe/post?u=c4acb00b499825f956980387e&amp;id=b60eee9927"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+  >
+    <div id="mc_embed_signup_scroll">
+      <div class="clear">获取Konva最新的信息</div>
+      <input
+        type="email"
+        value=""
+        name="EMAIL"
+        class="email"
+        id="mce-EMAIL"
+        placeholder="email address"
+        required
+      />
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input
+          type="text"
+          name="b_c4acb00b499825f956980387e_b60eee9927"
+          tabindex="-1"
+          value=""
+        />
+      </div>
+      <div class="clear">
+        <input
+          type="submit"
+          value="订&nbsp;&nbsp;阅"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          class="button"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+  <div class="outer">
+    <div id="mobile-menu-wrap"></div>
+    <div class="page-content">
+      <!--<div class="toc-wrap">-->
+      <!--<strong class="toc-title">Contents</strong>-->
+      <!--<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Konva-是什么"><span class="toc-number">1.</span> <span class="toc-text">Konva 是什么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工作原理"><span class="toc-number">2.</span> <span class="toc-text">工作原理?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本图形"><span class="toc-number">3.</span> <span class="toc-text">基本图形</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样式"><span class="toc-number">4.</span> <span class="toc-text">样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件"><span class="toc-number">5.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#拖放"><span class="toc-number">6.</span> <span class="toc-text">拖放</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滤镜"><span class="toc-number">7.</span> <span class="toc-text">滤镜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画"><span class="toc-number">8.</span> <span class="toc-text">动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器"><span class="toc-number">9.</span> <span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#序列化-nbsp-nbsp-反序列化"><span class="toc-number">10.</span> <span class="toc-text">序列化&amp;nbsp;&amp;nbsp;反序列化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能"><span class="toc-number">11.</span> <span class="toc-text">性能</span></a></li></ol>-->
+      <!--</div>-->
+      <div class="page-entry" itemprop="articleBody">
+        <h2 id="Konva-是什么"><a href="#Konva-是什么" class="headerlink" title="Konva 是什么?"></a>Konva 是什么?</h2><p><code>Konva</code> 是一个HTML5 Canvas JavaScript 框架，它通过对 2d context 的扩展实现了在桌面端和移动端的可交互性。Konva 提供了高性能的动画，补间，节点嵌套，布局，滤镜，缓存，事件绑定（桌面/移动端）等等功能。你可以使用 Konva 在舞台上绘制图形，给图形添加事件，移动、缩放和旋转图形并且支持高性能的动画即使包含数千个图形。</p>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理?"></a>工作原理?</h2><p>Konva 的对象是以一颗树的形式保存的，<code>Konva.Stage</code> 是树的根节点，<code>Stage</code> 子节点是用户创建的图层 （<code>Konva.Layer</code>）。</p>
+<p>每一个 layer 有两个 <code>&lt;canvas&gt;</code> 渲染器： 场景渲染器 和 图像命中检测渲染器。场景渲染器输出你所看见的内容，图像命中渲染器在隐藏的 canvas 里用于高性能的检测事件。</p>
+<p>图层可以包含图形、嵌套图形的组、嵌套组的组。<code>Stage</code>（舞台），<code>layers</code>（图层），<code>groups</code>（组），和 <code>shapes</code>（图形） 都是虚拟节点，类似于 HTML 的 DOM 节点。</p>
+<p>节点结构图:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">              Stage</span><br><span class="line">                |</span><br><span class="line">         +------+------+</span><br><span class="line">         |             |</span><br><span class="line">       Layer         Layer</span><br><span class="line">         |             |</span><br><span class="line">   +-----+-----+     Shape</span><br><span class="line">   |           |</span><br><span class="line"> Group       Group</span><br><span class="line">   |           |</span><br><span class="line">   +       +---+---+</span><br><span class="line">   |       |       |</span><br><span class="line">Shape   Group    Shape</span><br><span class="line">           |</span><br><span class="line">           +</span><br><span class="line">           |</span><br><span class="line">         Shape</span><br></pre></td></tr></table></figure>
+
+<p>你可以对所有节点修改样式和变换。<code>Konva</code> 内建了很多图形，例如：rectangles, circles, images, sprites, text, lines, polygons, regular polygons, paths, stars等等，也可以通过实例化 Shape class 和自定义 draw function 创建自定义图形。</p>
+<p>创建好了stage、layers 和 shapes 后，你就能进行绑定事件，变换节点，运行动画，添加滤镜等等操作了。</p>
+<p>简单的例子:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; first we need to create a stage</span><br><span class="line">var stage &#x3D; new Konva.Stage(&#123;</span><br><span class="line">  container: &#39;container&#39;,   &#x2F;&#x2F; id of container &lt;div&gt;</span><br><span class="line">  width: 500,</span><br><span class="line">  height: 500</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; then create layer</span><br><span class="line">var layer &#x3D; new Konva.Layer();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; create our shape</span><br><span class="line">var circle &#x3D; new Konva.Circle(&#123;</span><br><span class="line">  x: stage.width() &#x2F; 2,</span><br><span class="line">  y: stage.height() &#x2F; 2,</span><br><span class="line">  radius: 70,</span><br><span class="line">  fill: &#39;red&#39;,</span><br><span class="line">  stroke: &#39;black&#39;,</span><br><span class="line">  strokeWidth: 4</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; add the shape to the layer</span><br><span class="line">layer.add(circle);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; add the layer to the stage</span><br><span class="line">stage.add(layer);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; draw the image</span><br><span class="line">layer.draw();</span><br></pre></td></tr></table></figure>
+<p>Result:<br><img src="/assets/overview-circle.png" alt="Minimal code demo"></p>
+<h2 id="基本图形"><a href="#基本图形" class="headerlink" title="基本图形"></a>基本图形</h2><p><code>Konva</code> 支持的图形: <a href="/docs/shapes/Rect.html">Rect</a>, <a href="/docs/shapes/Circle.html">Circle</a>, <a href="/docs/shapes/Ellipse.html">Ellipse</a>, <a href="/docs/shapes/Line_-_Simple_Line.html">Line</a>, <a href="/docs/shapes/Line_-_Polygon.html">Polygon</a>, <a href="/docs/shapes/Line_-_Spline.html">Spline</a>, <a href="/docs/shapes/Line_-_Blob.html">Blob</a>, <a href="/docs/shapes/Image.html">Image</a>, <a href="/docs/shapes/Text.html">Text</a>, <a href="/docs/shapes/TextPath.html">TextPath</a>, <a href="/docs/shapes/Star.html">Star</a>, <a href="/docs/shapes/Label.html">Label</a>, <a href="/docs/shapes/Path.html">SVG Path</a>, <a href="/docs/shapes/RegularPolygon.html">RegularPolygon</a>.<br> 自定义图形 <a href="/docs/shapes/Custom.html">custom shape</a>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var triangle &#x3D; new Konva.Shape(&#123;</span><br><span class="line">      sceneFunc: function(context) &#123;</span><br><span class="line">        context.beginPath();</span><br><span class="line">        context.moveTo(20, 50);</span><br><span class="line">        context.lineTo(220, 80);</span><br><span class="line">        context.quadraticCurveTo(150, 100, 260, 170);</span><br><span class="line">        context.closePath();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; special Konva.js method</span><br><span class="line">        context.fillStrokeShape(this);</span><br><span class="line">      &#125;,</span><br><span class="line">      fill: &#39;#00D2FF&#39;,</span><br><span class="line">      stroke: &#39;black&#39;,</span><br><span class="line">      strokeWidth: 4</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><img src="/assets/overview-custom.png" alt="Custom shape"></p>
+<h2 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h2><p>图形支持的样式属性:</p>
+<ul>
+<li>Fill. Solid color, gradients or images</li>
+<li>Stroke (color, width)</li>
+<li>Shadow (color, offset, opacity, blur)</li>
+<li>Opacity</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var pentagon &#x3D; new Konva.RegularPolygon(&#123;</span><br><span class="line">    x: stage.width() &#x2F; 2,</span><br><span class="line">    y: stage.height() &#x2F; 2,</span><br><span class="line">    sides: 5,</span><br><span class="line">    radius: 70,</span><br><span class="line">    fill: &#39;red&#39;,</span><br><span class="line">    stroke: &#39;black&#39;,</span><br><span class="line">    strokeWidth: 4,</span><br><span class="line">    shadowOffsetX : 20,</span><br><span class="line">    shadowOffsetY : 25,</span><br><span class="line">    shadowBlur : 40,</span><br><span class="line">    opacity : 0.5</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><img src="/assets/overview-styles.png" alt="Styles"></p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>你可以轻松的监听输入事件 （<code>click</code>, <code>dblclick</code>, <code>mouseover</code>, <code>tap</code>, <code>dbltap</code>, <code>touchstart</code> 等等），attributes 变化事件 (<code>scaleXChange</code>, <code>fillChange</code> 等等) 和 拖放事件（<code>dragstart</code>, <code>dragmove</code>）。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">circle.on(&#39;mouseout touchend&#39;, function() &#123;</span><br><span class="line">    console.log(&#39;user input&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">circle.on(&#39;xChange&#39;, function() &#123;</span><br><span class="line">    console.log(&#39;position change&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">circle.on(&#39;dragend&#39;, function() &#123;</span><br><span class="line">    console.log(&#39;drag stopped&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>See <a href="/docs/events/Binding_Events.html">working example</a>.</p>
+<h2 id="拖放"><a href="#拖放" class="headerlink" title="拖放"></a>拖放</h2><p><code>Konva</code> 内置对 drag 的支持，但没有对 <code>drop</code> 事件支持 （<code>drop</code>, <code>dragenter</code>, <code>dragleave</code>, <code>dragover</code>），但是你可以轻松的实现它们 <a href="/docs/drag_and_drop/Drop_Events.html">via framework</a>。</p>
+<p>设置 draggable = true 启用拖放。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shape.draggable(&#39;true&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>接下来你就可以订阅 drag&amp;drop 事件和设置<a href="/docs/drag_and_drop/Complex_Drag_and_Drop.html">移动限制</a></p>
+<h2 id="滤镜"><a href="#滤镜" class="headerlink" title="滤镜"></a>滤镜</h2><p><code>Konva</code> 提供了多种滤镜：blur, invert, noise 等等。 详细请查看 <a href="/api/Konva.Filters.html">滤镜API</a></p>
+<p>示例:<br><img src="/assets/overview-filter.png" alt="Filter"></p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>你可以通过两种方式创建动画:</p>
+<ol>
+<li><p>通过 <code>Konva.Animation</code> <a href="/docs/animations/Moving.html">Demo</a>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var anim &#x3D; new Konva.Animation(function(frame) &#123;</span><br><span class="line">    var time &#x3D; frame.time,</span><br><span class="line">        timeDiff &#x3D; frame.timeDiff,</span><br><span class="line">        frameRate &#x3D; frame.frameRate;</span><br><span class="line">    &#x2F;&#x2F; update stuff</span><br><span class="line">&#125;, layer);</span><br><span class="line">anim.start();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 <code>Konva.Tween</code> <a href="/docs/tweens/Linear_Easing.html">Demo</a>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var tween &#x3D; new Konva.Tween(&#123;</span><br><span class="line">        node: rect,</span><br><span class="line">        duration: 1,</span><br><span class="line">        x: 140,</span><br><span class="line">        rotation: Math.PI * 2,</span><br><span class="line">        opacity: 1,</span><br><span class="line">        strokeWidth: 6</span><br><span class="line">&#125;);</span><br><span class="line">tween.play();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; or new shorter method:</span><br><span class="line">circle.to(&#123;</span><br><span class="line">    duration : 1,</span><br><span class="line">    fill : &#39;green&#39;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>当你的开发大型应用时，选择器可以帮助你快速查找元素。你可以使用 <code>find()</code> 和 <code>findOne</code>（返回找到的第一个）方法。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var circle &#x3D; new Konva.Circle(&#123;</span><br><span class="line">        radius: 10,</span><br><span class="line">        fill: &#39;red&#39;,</span><br><span class="line">        id : &#39;face&#39;,</span><br><span class="line">        name : &#39;red circle&#39;</span><br><span class="line">&#125;);</span><br><span class="line">layer.add(circle);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; then try to search</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; find by type</span><br><span class="line">layer.find(&#39;Circle&#39;); &#x2F;&#x2F; all circles</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; find by id</span><br><span class="line">layer.findOne(&#39;#face&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; find by name (like css class)</span><br><span class="line">layer.find(&#39;.red&#39;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="序列化-nbsp-nbsp-反序列化"><a href="#序列化-nbsp-nbsp-反序列化" class="headerlink" title="序列化&nbsp;&nbsp;反序列化"></a>序列化&nbsp;&nbsp;反序列化</h2><p>所有创建的对象都能保存为 JSON 格式。你可以将它保存在服务端或者 LocalStorage。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var json &#x3D; stage.toJSON();</span><br></pre></td></tr></table></figure>
+<p>你也可以通过 JSON 创建对象:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var json &#x3D; &#39;&#123;&quot;attrs&quot;:&#123;&quot;width&quot;:578,&quot;height&quot;:200&#125;,&quot;className&quot;:&quot;Stage&quot;,&quot;children&quot;:[&#123;&quot;attrs&quot;:&#123;&#125;,&quot;className&quot;:&quot;Layer&quot;,&quot;children&quot;:[&#123;&quot;attrs&quot;:&#123;&quot;x&quot;:100,&quot;y&quot;:100,&quot;sides&quot;:6,&quot;radius&quot;:70,&quot;fill&quot;:&quot;red&quot;,&quot;stroke&quot;:&quot;black&quot;,&quot;strokeWidth&quot;:4&#125;,&quot;className&quot;:&quot;RegularPolygon&quot;&#125;]&#125;]&#125;&#39;;</span><br><span class="line"></span><br><span class="line">var stage &#x3D; Konva.Node.create(json, &#39;container&#39;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h2><p><code>Konva</code> 提供了一些提升性能的工具。</p>
+<p>主要的方法有：</p>
+<ol>
+<li>缓存<br><code>Caching</code> 允许你在 buffer canvas 里绘制元素，然后再通过 buffer canvas 绘制到场景，它能提升绘制复杂节点例如：文本、包含阴影或者描边的图形。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">shape.cache();</span><br></pre></td></tr></table></figure>
+<p><a href="/docs/performance/Shape_Caching.html">Demo</a></p>
+<ol start="2">
+<li>图层<br>框架支持创建任意数量的 <code>&lt;canvas&gt;</code> 。如果你的应用包含复杂的背景和许多可以移动的图形，你可以使用一个图层显示背景另外要给图层显示图形，从而只更新图形而不更新背景。<a href="/docs/performance/Layer_Management.html">Demo</a></li>
+</ol>
+<p>查看所有提升性能的技巧 <a href="/docs/performance/All_Performance_Tips.html">https://konvajs.org/docs/performance/All_Performance_Tips.html</a></p>
+
+      </div>
+      <footer id="page-footer">
+        <time
+          id="page-footer-updated"
+          datetime="2021-12-02T10:38:36.710Z"
+          itemprop="dateModified"
+          >Last updated: Dec 2 2021</time
+        >
+        <a href="/docs/index.html" id="page-footer-prev" title="简介">Prev</a><a href="/docs/support.html" id="page-footer-next" title="帮助">Next</a>
+      </footer>
+      
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <aside id="sidebar">
+  
+    <strong class="sidebar-title">快速上手</strong>
+    
+      <a href="/docs/index.html" class="sidebar-link">简介</a>
+    
+      <a href="/docs/overview.html" class="sidebar-link current">基础</a>
+    
+      <a href="/docs/support.html" class="sidebar-link">帮助</a>
+    
+      <a href="/docs/donate.html" class="sidebar-link">支持 Konva</a>
+    
+      <a href="/docs/tools.html" class="sidebar-link">工具</a>
+    
+  
+    <strong class="sidebar-title">图形</strong>
+    
+      <a href="/docs/shapes/Rect.html" class="sidebar-link">Rect 矩形</a>
+    
+      <a href="/docs/shapes/Circle.html" class="sidebar-link">Circle 圆形</a>
+    
+      <a href="/docs/shapes/Ellipse.html" class="sidebar-link">Ellipse 椭圆</a>
+    
+      <a href="/docs/shapes/Wedge.html" class="sidebar-link">Wedge 扇形</a>
+    
+      <a href="/docs/shapes/Line_-_Simple_Line.html" class="sidebar-link">Line - 简单线条</a>
+    
+      <a href="/docs/shapes/Line_-_Polygon.html" class="sidebar-link">Line - 多边形</a>
+    
+      <a href="/docs/shapes/Line_-_Spline.html" class="sidebar-link">Line - 样条曲线</a>
+    
+      <a href="/docs/shapes/Line_-_Blob.html" class="sidebar-link">Line - Blob图形</a>
+    
+      <a href="/docs/shapes/Sprite.html" class="sidebar-link">Sprite 精灵图</a>
+    
+      <a href="/docs/shapes/Image.html" class="sidebar-link">Image 图片</a>
+    
+      <a href="/docs/shapes/Text.html" class="sidebar-link">Text 文字</a>
+    
+      <a href="/docs/shapes/TextPath.html" class="sidebar-link">TextPath 路径文字</a>
+    
+      <a href="/docs/shapes/Star.html" class="sidebar-link">Star 星形</a>
+    
+      <a href="/docs/shapes/Ring.html" class="sidebar-link">Ring 环形</a>
+    
+      <a href="/docs/shapes/Arc.html" class="sidebar-link">Arc 弧形</a>
+    
+      <a href="/docs/shapes/Label.html" class="sidebar-link">Label 标签</a>
+    
+      <a href="/docs/shapes/Path.html" class="sidebar-link">Path 路径</a>
+    
+      <a href="/docs/shapes/RegularPolygon.html" class="sidebar-link">RegularPolygon 等边多边形</a>
+    
+      <a href="/docs/shapes/Arrow.html" class="sidebar-link">Arrow 箭头</a>
+    
+      <a href="/docs/shapes/Custom.html" class="sidebar-link">Custom 自定义图形</a>
+    
+  
+    <strong class="sidebar-title">指南</strong>
+    
+      <a href="/docs/posts/Position_vs_Offset.html" class="sidebar-link">定位 vs 偏移</a>
+    
+  
+    <strong class="sidebar-title">样式</strong>
+    
+      <a href="/docs/styling/Fill.html" class="sidebar-link">填充</a>
+    
+      <a href="/docs/styling/Stroke.html" class="sidebar-link">笔画</a>
+    
+      <a href="/docs/styling/Opacity.html" class="sidebar-link">透明度</a>
+    
+      <a href="/docs/styling/Shadow.html" class="sidebar-link">阴影</a>
+    
+      <a href="/docs/styling/Line_Join.html" class="sidebar-link">边角</a>
+    
+      <a href="/docs/styling/Hide_and_Show.html" class="sidebar-link">显示和隐藏图形</a>
+    
+      <a href="/docs/styling/Mouse_Cursor.html" class="sidebar-link">鼠标样式</a>
+    
+      <a href="/docs/styling/Blend_Mode.html" class="sidebar-link">混合模式</a>
+    
+  
+    <strong class="sidebar-title">事件</strong>
+    
+      <a href="/docs/events/Binding_Events.html" class="sidebar-link">事件绑定</a>
+    
+      <a href="/docs/events/Image_Events.html" class="sidebar-link">图片事件</a>
+    
+      <a href="/docs/events/Mobile_Events.html" class="sidebar-link">移动端事件</a>
+    
+      <a href="/docs/events/Mobile_Scrolling.html" class="sidebar-link">移动端滚动</a>
+    
+      <a href="/docs/events/Multi_Event.html" class="sidebar-link">多重事件</a>
+    
+      <a href="/docs/events/Desktop_and_Mobile.html" class="sidebar-link">桌面端和移动端</a>
+    
+      <a href="/docs/events/Remove_Event.html" class="sidebar-link">移除</a>
+    
+      <a href="/docs/events/Remove_by_Name.html" class="sidebar-link">通过名称移除</a>
+    
+      <a href="/docs/events/Custom_Hit_Region.html" class="sidebar-link">自定义响应区域</a>
+    
+      <a href="/docs/events/Listen_for_Events.html" class="sidebar-link">监听事件</a>
+    
+      <a href="/docs/events/Cancel_Propagation.html" class="sidebar-link">停止传播</a>
+    
+      <a href="/docs/events/Event_Delegation.html" class="sidebar-link">事件委托</a>
+    
+      <a href="/docs/events/Fire_Events.html" class="sidebar-link">触发事件</a>
+    
+      <a href="/docs/events/Stage_Events.html" class="sidebar-link">舞台事件</a>
+    
+      <a href="/docs/events/Keyboard_Events.html" class="sidebar-link">键盘事件</a>
+    
+  
+    <strong class="sidebar-title">拖拽/释放</strong>
+    
+      <a href="/docs/drag_and_drop/Drag_and_Drop.html" class="sidebar-link">拖拽</a>
+    
+      <a href="/docs/drag_and_drop/Drag_an_Image.html" class="sidebar-link">拖拽图片</a>
+    
+      <a href="/docs/drag_and_drop/Drag_a_Group.html" class="sidebar-link">拖拽组</a>
+    
+      <a href="/docs/drag_and_drop/Drag_a_Line.html" class="sidebar-link">拖拽线条</a>
+    
+      <a href="/docs/drag_and_drop/Drag_a_Stage.html" class="sidebar-link">拖拽舞台</a>
+    
+      <a href="/docs/drag_and_drop/Drag_Events.html" class="sidebar-link">拖动事件</a>
+    
+      <a href="/docs/drag_and_drop/Simple_Drag_Bounds.html" class="sidebar-link">简单的拖拽区域</a>
+    
+      <a href="/docs/drag_and_drop/Complex_Drag_and_Drop.html" class="sidebar-link">复杂的拖拽区域</a>
+    
+      <a href="/docs/drag_and_drop/Drop_Events.html" class="sidebar-link">释放事件</a>
+    
+  
+    <strong class="sidebar-title">选择和变换图形</strong>
+    
+      <a href="/docs/select_and_transform/Basic_demo.html" class="sidebar-link">基础示例</a>
+    
+      <a href="/docs/select_and_transform/Centered_Scaling.html" class="sidebar-link">基于中心缩放</a>
+    
+      <a href="/docs/select_and_transform/Keep_Ratio.html" class="sidebar-link">保持宽高比</a>
+    
+      <a href="/docs/select_and_transform/Transformer_Styling.html" class="sidebar-link">变换控件样式</a>
+    
+      <a href="/docs/select_and_transform/Transform_Events.html" class="sidebar-link">图形变换事件</a>
+    
+      <a href="/docs/select_and_transform/Resize_Limits.html" class="sidebar-link">调整尺寸限制</a>
+    
+      <a href="/docs/select_and_transform/Rotation_Snaps.html" class="sidebar-link">旋转吸附</a>
+    
+      <a href="/docs/select_and_transform/Stop_Transform.html" class="sidebar-link">禁用变换</a>
+    
+      <a href="/docs/select_and_transform/Force_Update.html" class="sidebar-link">强制更新</a>
+    
+      <a href="/docs/select_and_transform/Resize_Text.html" class="sidebar-link">调整文字尺寸</a>
+    
+      <a href="/docs/select_and_transform/Ignore_Stroke_On_Transform.html" class="sidebar-link">忽略描边</a>
+    
+  
+    <strong class="sidebar-title">裁剪</strong>
+    
+      <a href="/docs/clipping/Clipping_Regions.html" class="sidebar-link">简单裁剪</a>
+    
+      <a href="/docs/clipping/Clipping_Function.html" class="sidebar-link">复杂裁剪</a>
+    
+  
+    <strong class="sidebar-title">组、图层和层级</strong>
+    
+      <a href="/docs/groups_and_layers/Groups.html" class="sidebar-link">组</a>
+    
+      <a href="/docs/groups_and_layers/Layering.html" class="sidebar-link">分层</a>
+    
+      <a href="/docs/groups_and_layers/Change_Containers.html" class="sidebar-link">更换容器</a>
+    
+      <a href="/docs/groups_and_layers/zIndex.html" class="sidebar-link">zIndex</a>
+    
+  
+    <strong class="sidebar-title">滤镜</strong>
+    
+      <a href="/docs/filters/Blur.html" class="sidebar-link">Blur 模糊</a>
+    
+      <a href="/docs/filters/Brighten.html" class="sidebar-link">Brighten 亮度</a>
+    
+      <a href="/docs/filters/Contrast.html" class="sidebar-link">Contrast 对比度</a>
+    
+      <a href="/docs/filters/Emboss.html" class="sidebar-link">Emboss 浮雕</a>
+    
+      <a href="/docs/filters/Enhance.html" class="sidebar-link">Enhance 增强反差</a>
+    
+      <a href="/docs/filters/Grayscale.html" class="sidebar-link">Grayscale 灰度</a>
+    
+      <a href="/docs/filters/HSL.html" class="sidebar-link">HSL</a>
+    
+      <a href="/docs/filters/HSV.html" class="sidebar-link">HSV</a>
+    
+      <a href="/docs/filters/RGB.html" class="sidebar-link">RGB</a>
+    
+      <a href="/docs/filters/Invert.html" class="sidebar-link">Invert 反相</a>
+    
+      <a href="/docs/filters/Kaleidoscope.html" class="sidebar-link">Kaleidoscope 万花筒</a>
+    
+      <a href="/docs/filters/Mask.html" class="sidebar-link">Mask 遮罩</a>
+    
+      <a href="/docs/filters/Noise.html" class="sidebar-link">Noise 噪声</a>
+    
+      <a href="/docs/filters/Pixelate.html" class="sidebar-link">Pixelate 像素化</a>
+    
+      <a href="/docs/filters/Custom_Filter.html" class="sidebar-link">自定义滤镜</a>
+    
+      <a href="/docs/filters/Multiple_Filters.html" class="sidebar-link">多重滤镜</a>
+    
+  
+    <strong class="sidebar-title">补间动画(翻译中)</strong>
+    
+      <a href="/docs/tweens/Linear_Easing.html" class="sidebar-link">线性缓动</a>
+    
+      <a href="/docs/tweens/Common_Easings.html" class="sidebar-link">通用缓动函数</a>
+    
+      <a href="/docs/tweens/All_Easings.html" class="sidebar-link">全部缓动函数</a>
+    
+      <a href="/docs/tweens/Finish_Event.html" class="sidebar-link">动画完成事件</a>
+    
+      <a href="/docs/tweens/All_Controls.html" class="sidebar-link">控制器</a>
+    
+      <a href="/docs/tweens/Tween_Filter.html" class="sidebar-link">补间滤镜</a>
+    
+      <a href="/docs/tweens/Complex_Tweening.html" class="sidebar-link">复杂补间</a>
+    
+  
+    <strong class="sidebar-title">动画(待翻译)</strong>
+    
+      <a href="/docs/animations/Create_an_Animation.html" class="sidebar-link">创建动画</a>
+    
+      <a href="/docs/animations/Moving.html" class="sidebar-link">移动</a>
+    
+      <a href="/docs/animations/Rotation.html" class="sidebar-link">旋转</a>
+    
+      <a href="/docs/animations/Scaling.html" class="sidebar-link">缩放</a>
+    
+      <a href="/docs/animations/Stop_Animation.html" class="sidebar-link">停止动画</a>
+    
+  
+    <strong class="sidebar-title">选择器(待翻译)</strong>
+    
+      <a href="/docs/selectors/Select_by_id.html" class="sidebar-link">id 选择器</a>
+    
+      <a href="/docs/selectors/Select_by_Type.html" class="sidebar-link">type 选择器</a>
+    
+      <a href="/docs/selectors/Select_by_Name.html" class="sidebar-link">name 选择器</a>
+    
+  
+    <strong class="sidebar-title">数据 &amp; 序列化 &amp; 导出(待翻译)</strong>
+    
+      <a href="/docs/data_and_serialization/Serialize_a_Stage.html" class="sidebar-link">序列化舞台数据</a>
+    
+      <a href="/docs/data_and_serialization/Simple_Load.html" class="sidebar-link">简单导入</a>
+    
+      <a href="/docs/data_and_serialization/Complex_Load.html" class="sidebar-link">复杂导入</a>
+    
+      <a href="/docs/data_and_serialization/Best_Practices.html" class="sidebar-link">JSON最佳实践</a>
+    
+      <a href="/docs/data_and_serialization/Stage_Data_URL.html" class="sidebar-link">舞台 Data URL</a>
+    
+      <a href="/docs/data_and_serialization/High-Quality-Export.html" class="sidebar-link">到处高分辨率图片</a>
+    
+  
+    <strong class="sidebar-title">性能优化(待翻译)</strong>
+    
+      <a href="/docs/performance/All_Performance_Tips.html" class="sidebar-link">技巧</a>
+    
+      <a href="/docs/performance/Layer_Management.html" class="sidebar-link">图层管理</a>
+    
+      <a href="/docs/performance/Batch_Draw.html" class="sidebar-link">批量绘制</a>
+    
+      <a href="/docs/performance/Shape_Caching.html" class="sidebar-link">图形缓存</a>
+    
+      <a href="/docs/performance/Optimize_Animation.html" class="sidebar-link">动画优化</a>
+    
+      <a href="/docs/performance/Optimize_Strokes.html" class="sidebar-link">笔画优化</a>
+    
+      <a href="/docs/performance/Shape_Redraw.html" class="sidebar-link">图形重绘</a>
+    
+      <a href="/docs/performance/Disable_Perfect_Draw.html" class="sidebar-link">关闭 Perfect Drawing</a>
+    
+      <a href="/docs/performance/Listening_False.html" class="sidebar-link">禁用事件监听</a>
+    
+      <a href="/docs/performance/Avoid_Memory_Leaks.html" class="sidebar-link">防止内存溢出</a>
+    
+  
+</aside>
+  </div>
+</article>
+ <footer id="footer">
+  <div class="outer">
+      <div class="inner">
+          <!-- Begin Mailchimp Signup Form -->
+<style type="text/css">
+  /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
+Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
+
+  #mc_embed_signup form {
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+  .mc-field-group {
+    display: inline-block;
+  } /* positions input field horizontally */
+  #mc_embed_signup input.email {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, Verdana,
+      sans-serif;
+    font-size: 15px;
+    border: 1px solid #abb0b2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #343434;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 0.4em;
+    display: inline-block;
+    margin: 0;
+    width: 350px;
+    vertical-align: top;
+  }
+  #mc_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  #mc_embed_signup .clear {
+    display: inline-block;
+  } /* positions button horizontally in line with input */
+  #mc_embed_signup .button {
+    font-size: 13px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background-color: #aaa;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 18px;
+    display: inline-block;
+    margin: 0;
+    transition: all 0.23s ease-in-out 0s;
+  }
+  #mc_embed_signup .button:hover {
+    background-color: #777;
+    cursor: pointer;
+  }
+  #mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em 0.5em 0em 0.5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+  }
+  #mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em 0.5em 0.5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+  }
+  #mc_embed_signup #mce-error-response {
+    display: none;
+  }
+  #mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+  }
+  #mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: 0.5em 0;
+  }
+  @media (max-width: 768px) {
+    #mc_embed_signup input.email {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    #mc_embed_signup .clear {
+      display: block;
+      width: 100%;
+    }
+    #mc_embed_signup .button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+  }
+  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+  <form
+    action="https://lavrton.us10.list-manage.com/subscribe/post?u=c4acb00b499825f956980387e&amp;id=b60eee9927"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+  >
+    <div id="mc_embed_signup_scroll">
+      <div class="clear">获取Konva最新的信息</div>
+      <input
+        type="email"
+        value=""
+        name="EMAIL"
+        class="email"
+        id="mce-EMAIL"
+        placeholder="email address"
+        required
+      />
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input
+          type="text"
+          name="b_c4acb00b499825f956980387e_b60eee9927"
+          tabindex="-1"
+          value=""
+        />
+      </div>
+      <div class="clear">
+        <input
+          type="submit"
+          value="订&nbsp;&nbsp;阅"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          class="button"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+        </div>
+    <div class="inner">
+      <div class="footer-resources">
+        <h3>文档</h3>
+        <ul>
+          <li><a href="/docs">教程</a></li>
+          <li><a href="/docs/overview.html">基础</a></li>
+          <li><a href="/api/Konva.html">API 文档</a></li>
+
+          <li><a href="/docs/sandbox/">示例</a></li>
+          <li><a href="/docs/react/">在 React 中使用</a></li>
+          <li><a href="/docs/vue/">在 Vue 中使用</a></li>
+          <li>
+            <a href="https://github.com/konvajs/konva/blob/master/CHANGELOG.md"
+              >Changelog</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer-resources">
+        <h3>资源</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/konvajs/konva" target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://stackoverflow.com/questions/tagged/konvajs"
+              target="_blank"
+              >StackOverflow</a
+            >
+          </li>
+          <li><a href="https://gitter.im/konvajs/konva" target="_blank">GitTip chat</a></li>
+          <li>
+            <a href="https://github.com/konvajs/konva/blob/master/CHANGELOG.md" target="_blank"
+              >Changelog</a
+            >
+          </li>
+        </ul>
+        
+      </div>
+      <div class="footer-resources">
+          <h3>更多</h3>
+          <ul>
+            <li>
+              <a href="/docs/support.html"
+                >需要帮助?</a
+              >
+            </li>
+            <li>
+              <a
+                href="/docs/donate.html"
+                target="_blank"
+                >捐赠</a
+              >
+            </li>
+          </ul>
+    </div>
+    <div class="inner">
+        <div id="footer-copyright">
+            &copy; 2022 KonvaJS<br />
+          </div>
+      <div id="footer-links">
+        <a
+          href="https://twitter.com/lavrton"
+          id="footer-link-twitter"
+          class="footer-link"
+          target="_blank"
+          ><span>Twitter</span></a
+        >
+        <a
+          href="https://github.com/konvajs/konva"
+          id="footer-link-github"
+          class="footer-link"
+          target="_blank"
+          ><span>GitHub</span></a
+        >
+      </div>
+    </div>
+  
+  </div>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'konvajs/konva'
+    };
+  </script>
+  <script
+    src="https://sidecar.gitter.im/dist/sidecar.v1.js"
+    async
+    defer
+  ></script>
+</footer>
+ 
+<!-- Disqus -->
+<script>
+  var disqus_shortname = 'konvajs';
+  
+  var disqus_url = 'http://konvajs-doc.bluehymn.com/docs/overview.html';
+  
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//go.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<!-- Swiftype -->
+<!--
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function () {
+      Swiftype.key = 'rRaQRFqx1DcWDDysdpg_';
+
+      /** DO NOT EDIT BELOW THIS LINE **/
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = "//s.swiftypecdn.com/embed.js";
+      var entry = document.getElementsByTagName('script')[0];
+      document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+    }());
+  </script>
+-->
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+/>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+></script>
+<script type="text/javascript">
+  docsearch({
+    apiKey: '031987a5aa012671236e1d4992009b4f',
+    indexName: 'konvajs',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 10
+      // See https://www.algolia.com/doc/api-reference/api-parameters/
+    },
+    // transformData: function (suggestions) {
+    //   // Transform the list of suggestions, and the return the updated list
+    //   suggestions.sort(function (a, b) {
+    //     if (a.url.indexOf('/api/') >= 0) {
+    //       return 1;
+    //     } else {
+    //       return -1;
+    //     }
+    //   });
+    //   return suggestions.slice(0, 10);
+    // },
+    debug: true // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="/js/retina.min.js"></script>
+ 
+<script src="/js/script.js"></script>
+
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>
+  !(function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0],
+      p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + '://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, 'script', 'twitter-wjs');
+</script>
+
+  </body>
+</html>

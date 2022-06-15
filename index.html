@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+<title>
+  Konva 中文文档 中文API
+</title>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=1"
+/>
+<link rel="canonical" href="http://konvajs-doc.bluehymn.com/index.html" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link
+  rel="apple-touch-icon"
+  sizes="114x114"
+  href="/apple-touch-icon-114x114.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="120x120"
+  href="/apple-touch-icon-120x120.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/apple-touch-icon-144x144.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png"
+/>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link
+  rel="icon"
+  type="image/png"
+  href="/android-chrome-192x192.png"
+  sizes="192x192"
+/>
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link rel="manifest" href="/android-chrome-manifest.json" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+<meta name="theme-color" content="#ffffff" /> 
+<link rel="stylesheet" href="/css/style.css">
+
+<link
+  href="//fonts.googleapis.com/css?family=Lato:300,700"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="//fonts.googleapis.com/css?family=Source+Code+Pro:400,700"
+  rel="stylesheet"
+  type="text/css"
+/>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?01c61841a1e37d9447fca013e22f8f67";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<link rel="alternate" href="/atom.xml" title="Konva.js - JavaScript 2d canvas library"> <meta name="description" content="Konva Konvajs 中文文档, Konva 是一个HTML5 Canvas JavaScript 框架，它通过对 2d context 的扩展实现了在桌面端和移动端的可交互性。提供了高性能的动画，补间，节点嵌套，布局，滤镜，缓存，事件绑定（桌面&#x2F;移动端）等等功能.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Konva.js - JavaScript 2d canvas library">
+<meta property="og:url" content="http://konvajs-doc.bluehymn.com/index.html">
+<meta property="og:site_name" content="Konva.js - JavaScript 2d canvas library">
+<meta property="og:description" content="Konva Konvajs 中文文档, Konva 是一个HTML5 Canvas JavaScript 框架，它通过对 2d context 的扩展实现了在桌面端和移动端的可交互性。提供了高性能的动画，补间，节点嵌套，布局，滤镜，缓存，事件绑定（桌面&#x2F;移动端）等等功能.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://konvajs-doc.bluehymn.com/logo.png">
+<meta property="article:published_time" content="2020-12-10T01:44:59.255Z">
+<meta property="article:modified_time" content="2020-12-10T01:44:59.255Z">
+<meta property="article:author" content="Anton Lavrenov">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://konvajs-doc.bluehymn.com/logo.png">
+<meta name="twitter:site" content="@lavrton"> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-155099157-1', 'konvajs-doc.bluehymn.com');
+  ga('send', 'pageview');
+</script>
+
+
+  </head>
+  <body>
+    <header id="header">
+  <div class="outer">
+    <div class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Konva</a>
+        <a id="main-nav-toggle"></a>
+      </h1>
+      <nav id="main-nav">
+        <ul id="main-nav-list">
+          
+          <li class="main-nav-item">
+            <a href="/docs/" class="main-nav-link">
+              教程
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/sandbox" class="main-nav-link">
+              示例
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/api/Konva.html" class="main-nav-link">
+              API
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/react" class="main-nav-link">
+              React
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/vue" class="main-nav-link">
+              Vue
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/donate.html" class="main-nav-link">
+              支持 Konva
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <a href="/docs/support.html" class="main-nav-link">
+              帮助
+            </a>
+          </li>
+          
+          <li class="main-nav-item">
+            <input id="search" placeholder="Search the docs" />
+          </li>
+          <li class="main-nav-item">
+            <a
+              href="https://lavrton.com/consulting"
+              title="Consulting"
+              target="_blank"
+              class="main-nav-link"
+              style="color: white;background: #0bad42;padding: 10px;border-radius: 10px;"
+              >Consulting</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="https://github.com/konvajs/konva"
+          id="github-btn"
+          title="GitHub"
+          target="_blank"
+        ></a>
+        <!--
+          <a id="search-btn" class="st-search-launcher" title="Search"></a>
+        -->
+      </nav>
+    </div>
+  </div>
+</header>
+ <div id="banner">
+  <div class="outer">
+    <div class="inner" style="text-align: center;">
+      <h2 id="banner-title">
+        Konva.js - 适用于桌面/移动端应用的 HTML5 2d canvas 库.
+      </h2>
+      <pre
+        style="padding: 10px; margin-top: 14px; line-height: 16px; width: 170px; display: inline-block;"
+      >
+npm install konva</pre
+      >
+      <div id="banner-getting-started">
+        <a
+          class="btn"
+          href="https://unpkg.com/konva@4.0.0/konva.min.js"
+          target="_blank"
+          >⬇️ 下&nbsp;&nbsp;载</a
+        >
+        <a class="btn" href="/docs/">🤓 快速上手</a>
+      </div>
+      <div id="banner-share">
+        <!-- GitHub Star -->
+<iframe
+  src="https://ghbtns.com/github-btn.html?user=konvajs&repo=konva&type=watch&count=true"
+  allowtransparency="true"
+  frameborder="0"
+  scrolling="0"
+  width="110px"
+  height="20px"
+  class="alignleft"
+></iframe>
+<!-- Tweet button -->
+<a
+  href="https://twitter.com/share"
+  class="twitter-share-button"
+  data-url="https://konvajs.org/"
+  data-text="Konva - is a 2d html5 canvas library for desktop and mobile applications."
+  data-hashtags="konvajs,javascript"
+  >Tweet</a
+>
+<!-- Twitter Follow Button -->
+<a
+  href="https://twitter.com/lavrton"
+  class="twitter-follow-button"
+  data-show-count="false"
+  >Follow @lavrton</a
+>
+
+        <div><!-- Begin Mailchimp Signup Form -->
+<style type="text/css">
+  /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
+Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
+
+  #mc_embed_signup form {
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+  .mc-field-group {
+    display: inline-block;
+  } /* positions input field horizontally */
+  #mc_embed_signup input.email {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, Verdana,
+      sans-serif;
+    font-size: 15px;
+    border: 1px solid #abb0b2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #343434;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 0.4em;
+    display: inline-block;
+    margin: 0;
+    width: 350px;
+    vertical-align: top;
+  }
+  #mc_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  #mc_embed_signup .clear {
+    display: inline-block;
+  } /* positions button horizontally in line with input */
+  #mc_embed_signup .button {
+    font-size: 13px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background-color: #aaa;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 18px;
+    display: inline-block;
+    margin: 0;
+    transition: all 0.23s ease-in-out 0s;
+  }
+  #mc_embed_signup .button:hover {
+    background-color: #777;
+    cursor: pointer;
+  }
+  #mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em 0.5em 0em 0.5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+  }
+  #mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em 0.5em 0.5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+  }
+  #mc_embed_signup #mce-error-response {
+    display: none;
+  }
+  #mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+  }
+  #mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: 0.5em 0;
+  }
+  @media (max-width: 768px) {
+    #mc_embed_signup input.email {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    #mc_embed_signup .clear {
+      display: block;
+      width: 100%;
+    }
+    #mc_embed_signup .button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+  }
+  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+  <form
+    action="https://lavrton.us10.list-manage.com/subscribe/post?u=c4acb00b499825f956980387e&amp;id=b60eee9927"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+  >
+    <div id="mc_embed_signup_scroll">
+      <div class="clear">获取Konva最新的信息</div>
+      <input
+        type="email"
+        value=""
+        name="EMAIL"
+        class="email"
+        id="mce-EMAIL"
+        placeholder="email address"
+        required
+      />
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input
+          type="text"
+          name="b_c4acb00b499825f956980387e_b60eee9927"
+          tabindex="-1"
+          value=""
+        />
+      </div>
+      <div class="clear">
+        <input
+          type="submit"
+          value="订&nbsp;&nbsp;阅"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          class="button"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="intro-wrap"><div class="outer"><h2 class="intro-features">特性</h2><ul class="features"><li>📱 支持高分辨率设备，通过 pixel ratio 优化能够绘制锐利的文本和图形</li><li>📦 面向对象 API</li><li>🛁 节点嵌套和事件绑定</li><li>🚀 通过 color map hashing 实现高性能的事件检测</li><li>📄 图层</li><li>🤔 通过节点缓存提升性能</li><li>🎇 节点可以转化为 data URLs, image data 或 image objects</li><li>👍 动画</li><li>👍 补间</li><li>👇 拖放并且支持设置拖放边界和位置约束</li><li>🎑 滤镜</li><li>🔲 内建各种图形 矩形, 圆形, 图片, 文字, 线条, 多边形, SVG路径等等</li><li>❤️ 自定义图形</li><li>🚕 事件驱动架构，开发者可以订阅属性变更、图层绘制等事件</li><li>🤓 序列化/反序列化</li><li>🔍 选择器 支持例如： stage.get('#foo') and layer.get('.bar')</li><li>🖥 支持桌面/移动端事件</li><li>👀 自定义事件命中检测区域</li><li>and more...</li></ul><h2 class="intro-features">谁在使用 Konva?</h2><div class="grid-container"><div class="grid-item"><a href="https://pixteller.com" target="_blank"><div style="background-image: url(/assets/users/pixteller.png);" class="preview"></div><div class="description"><h5 class="name">Pixteller</h5><p>Easy-to-use design tool to create or customize any image in seconds</p></div></a></div><div class="grid-item"><a href="https://getpaddee.com" target="_blank"><div style="background-image: url(/assets/users/paddee.png);" class="preview"></div><div class="description"><h5 class="name">Paddee</h5><p>Marketplace and online editor for photo booth templates</p></div></a></div><div class="grid-item"><a href="http://ysneakers.com/" target="_blank"><div style="background-image: url(/assets/users/ysneakers.jpg);" class="preview"></div><div class="description"><h5 class="name">Ysneakers</h5><p>Shoes congifurator</p></div></a></div><div class="grid-item"><a href="https://www.brikl.io/?utm_source=konvajs&amp;utm_medium=listing&amp;utm_campaign=konvajsusers" target="_blank"><div style="background-image: url(/assets/users/brikl.jpg);" class="preview"></div><div class="description"><h5 class="name">Brikl</h5><p>Fashion design platform</p></div></a></div><div id="intro-btn-wrap"><a href="https://github.com/konvajs/konva/issues/256" target="_blank" rel="noopener" class="add-app">Do you want to add your app here?</a></div></div><h2 class="intro-features">Demo</h2><iframe src="https://codesandbox.io/embed/github/konvajs/site/tree/master/main-demo?hidenavigation=1&amp;view=preview&amp;fontsize=10" style="width:100%; height:600px; border:0; border-radius: 4px; overflow:hidden;&quot; sandbox=&quot;allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe></div><div class="outer"><div id="intro-btn-wrap"><a id="intro-btn" href="/docs/">快速上手</a></div></div></div>
+ <footer id="footer">
+  <div class="outer">
+      <div class="inner">
+          <!-- Begin Mailchimp Signup Form -->
+<style type="text/css">
+  /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
+Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
+
+  #mc_embed_signup form {
+    text-align: center;
+    padding: 10px 0 10px 0;
+  }
+  .mc-field-group {
+    display: inline-block;
+  } /* positions input field horizontally */
+  #mc_embed_signup input.email {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, Verdana,
+      sans-serif;
+    font-size: 15px;
+    border: 1px solid #abb0b2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #343434;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 0.4em;
+    display: inline-block;
+    margin: 0;
+    width: 350px;
+    vertical-align: top;
+  }
+  #mc_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+  #mc_embed_signup .clear {
+    display: inline-block;
+  } /* positions button horizontally in line with input */
+  #mc_embed_signup .button {
+    font-size: 13px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background-color: #aaa;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 18px;
+    display: inline-block;
+    margin: 0;
+    transition: all 0.23s ease-in-out 0s;
+  }
+  #mc_embed_signup .button:hover {
+    background-color: #777;
+    cursor: pointer;
+  }
+  #mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em 0.5em 0em 0.5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+  }
+  #mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em 0.5em 0.5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+  }
+  #mc_embed_signup #mce-error-response {
+    display: none;
+  }
+  #mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+  }
+  #mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: 0.5em 0;
+  }
+  @media (max-width: 768px) {
+    #mc_embed_signup input.email {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    #mc_embed_signup .clear {
+      display: block;
+      width: 100%;
+    }
+    #mc_embed_signup .button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 100%;
+  }
+  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+  <form
+    action="https://lavrton.us10.list-manage.com/subscribe/post?u=c4acb00b499825f956980387e&amp;id=b60eee9927"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+  >
+    <div id="mc_embed_signup_scroll">
+      <div class="clear">获取Konva最新的信息</div>
+      <input
+        type="email"
+        value=""
+        name="EMAIL"
+        class="email"
+        id="mce-EMAIL"
+        placeholder="email address"
+        required
+      />
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input
+          type="text"
+          name="b_c4acb00b499825f956980387e_b60eee9927"
+          tabindex="-1"
+          value=""
+        />
+      </div>
+      <div class="clear">
+        <input
+          type="submit"
+          value="订&nbsp;&nbsp;阅"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          class="button"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--End mc_embed_signup-->
+
+        </div>
+    <div class="inner">
+      <div class="footer-resources">
+        <h3>文档</h3>
+        <ul>
+          <li><a href="/docs">教程</a></li>
+          <li><a href="/docs/overview.html">基础</a></li>
+          <li><a href="/api/Konva.html">API 文档</a></li>
+
+          <li><a href="/docs/sandbox/">示例</a></li>
+          <li><a href="/docs/react/">在 React 中使用</a></li>
+          <li><a href="/docs/vue/">在 Vue 中使用</a></li>
+          <li>
+            <a href="https://github.com/konvajs/konva/blob/master/CHANGELOG.md"
+              >Changelog</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer-resources">
+        <h3>资源</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/konvajs/konva" target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://stackoverflow.com/questions/tagged/konvajs"
+              target="_blank"
+              >StackOverflow</a
+            >
+          </li>
+          <li><a href="https://gitter.im/konvajs/konva" target="_blank">GitTip chat</a></li>
+          <li>
+            <a href="https://github.com/konvajs/konva/blob/master/CHANGELOG.md" target="_blank"
+              >Changelog</a
+            >
+          </li>
+        </ul>
+        
+      </div>
+      <div class="footer-resources">
+          <h3>更多</h3>
+          <ul>
+            <li>
+              <a href="/docs/support.html"
+                >需要帮助?</a
+              >
+            </li>
+            <li>
+              <a
+                href="/docs/donate.html"
+                target="_blank"
+                >捐赠</a
+              >
+            </li>
+          </ul>
+    </div>
+    <div class="inner">
+        <div id="footer-copyright">
+            &copy; 2022 KonvaJS<br />
+          </div>
+      <div id="footer-links">
+        <a
+          href="https://twitter.com/lavrton"
+          id="footer-link-twitter"
+          class="footer-link"
+          target="_blank"
+          ><span>Twitter</span></a
+        >
+        <a
+          href="https://github.com/konvajs/konva"
+          id="footer-link-github"
+          class="footer-link"
+          target="_blank"
+          ><span>GitHub</span></a
+        >
+      </div>
+    </div>
+  
+  </div>
+  
+  <script>
+    ((window.gitter = {}).chat = {}).options = {
+      room: 'konvajs/konva'
+    };
+  </script>
+  <script
+    src="https://sidecar.gitter.im/dist/sidecar.v1.js"
+    async
+    defer
+  ></script>
+</footer>
+ 
+<!-- Disqus -->
+<script>
+  var disqus_shortname = 'konvajs';
+  
+  var disqus_url = 'http://konvajs-doc.bluehymn.com/index.html';
+  
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//go.disqus.com/count.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+<!-- Swiftype -->
+<!--
+  <script>
+    var Swiftype = window.Swiftype || {};
+    (function () {
+      Swiftype.key = 'rRaQRFqx1DcWDDysdpg_';
+
+      /** DO NOT EDIT BELOW THIS LINE **/
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = "//s.swiftypecdn.com/embed.js";
+      var entry = document.getElementsByTagName('script')[0];
+      document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+    }());
+  </script>
+-->
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+/>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+></script>
+<script type="text/javascript">
+  docsearch({
+    apiKey: '031987a5aa012671236e1d4992009b4f',
+    indexName: 'konvajs',
+    inputSelector: '#search',
+    algoliaOptions: {
+      hitsPerPage: 10
+      // See https://www.algolia.com/doc/api-reference/api-parameters/
+    },
+    // transformData: function (suggestions) {
+    //   // Transform the list of suggestions, and the return the updated list
+    //   suggestions.sort(function (a, b) {
+    //     if (a.url.indexOf('/api/') >= 0) {
+    //       return 1;
+    //     } else {
+    //       return -1;
+    //     }
+    //   });
+    //   return suggestions.slice(0, 10);
+    // },
+    debug: true // Set debug to true if you want to inspect the dropdown
+  });
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="/js/retina.min.js"></script>
+ 
+<script src="/js/script.js"></script>
+
+<!-- Google+ -->
+<script type="text/javascript" src="//apis.google.com/js/plusone.js"></script>
+<!-- Twitter -->
+<script>
+  !(function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0],
+      p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + '://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, 'script', 'twitter-wjs');
+</script>
+
+  </body>
+</html>
